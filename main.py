@@ -5,13 +5,10 @@ import ccxt
 from datetime import datetime, timedelta
 import time
 import pandas as pd
-import asyncio
 from secret import ACCOUNTS
 from utilitie.definition import initialisation, calcul_params, get_ohlcv, order_executer, open_order, close_order, cancel_order, load_last_hour
 
 
-import numpy as np
-from concurrent.futures import ThreadPoolExecutor
 
 exchange_auth_object = ACCOUNTS["bitget_envelope"]
 exchange = ccxt.bitget(exchange_auth_object)
